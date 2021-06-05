@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="title-color">Cadastro de adoção</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="adocaoForm">
+    
+
+    <ion-item>
+      <ion-label>Nome:</ion-label>
+      <ion-input formControlName="nome" type="text"></ion-input>
+      <ion-text color="danger" *ngIf="nome.errors">
+        <small *ngIf="nome.errors.required && (nome.dirty || nome.touched)">
+          O campo Nome é obrigatório!
+        </small>
+        <small *ngIf="nome.errors.minlength && (nome.dirty || nome.touched)">
+          O campo Nome deve conter no mínimo 3 caracteres
+        </small>
+        <small *ngIf="nome.errors.maxlength && (nome.dirty || nome.touched)">
+          O campo Nome deve conter no máximo 150 caracteres
+        </small>
+      </ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Telefone:</ion-label>
+      <ion-input type="number" formControlName="telefone"></ion-input>
+      <ion-text color="danger" *ngIf="telefone.errors">
+        <small *ngIf="telefone.errors.required && (telefone.dirty || telefone.touched)">
+          O campo Telefone é obrigatório!
+        </small>
+      </ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Cidade:</ion-label>
+      <ion-input type="text" formControlName="cidade"></ion-input>
+      <ion-text color="danger" *ngIf="cidade.errors">
+        <small *ngIf="cidade.errors.required && (cidade.dirty || cidade.touched)">
+          O campo Cidade é obrigatório!
+        </small>
+        <small *ngIf="cidade.errors.minlength && (cidade.dirty || cidade.touched)">
+          O campo Cidade deve conter no mínimo 3 caracteres
+        </small>
+        <small *ngIf="cidade.errors.maxlength && (cidade.dirty || cidade.touched)">
+          O campo Cidade deve conter no máximo 150 caracteres
+        </small>
+      </ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Email:</ion-label>
+      <ion-input type="text" formControlName="email"></ion-input>
+      <ion-text color="danger" *ngIf="email.errors">
+        <small *ngIf="email.errors.required && (email.dirty || email.touched)">
+          O campo Email é obrigatório!
+        </small>
+        <small *ngIf="email.errors.minlength && (email.dirty || email.touched)">
+          O campo Email deve conter no mínimo 3 caracteres
+        </small>
+        <small *ngIf="email.errors.maxlength && (email.dirty || email.touched)">
+          O campo Email deve conter no máximo 150 caracteres
+        </small>
+      </ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Pets:</ion-label>
+      <ion-text color="danger" *ngIf="pets.errors">
+        <small *ngIf="pets.errors.required && (pets.dirty || pets.touched)">
+          O campo Pets é obrigatório!
+        </small>
+      </ion-text>
+      <ion-select [compareWith]="compareWithPets" formControlName="pets" multiple="false"
+        placeholder="Selecione os Pets">
+        <ion-select-option *ngFor="let pet of pets" [value]="pet">
+          {{pet.nome}}
+        </ion-select-option>
+      </ion-select>
+
+    </ion-item>
+
+    
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button (click)="salvar()" [disabled]="!adocaoForm.valid">
+        <ion-icon name="checkmark"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </form>
+
+</ion-content>

@@ -1,0 +1,48 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title class="title-color">Cadastro de Vacinas</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <form [formGroup]="vacinasForm">
+
+        <ion-item>
+            <ion-label position="floating">Nome: </ion-label>
+            <ion-input formControlName="nome" type="text"></ion-input>
+            <ion-text color="danger" *ngIf="nome.errors">
+                <small *ngIf="nome.errors.required && (nome.dirty || nome.touched)">
+                    O campo nome é obrigatório
+                </small>
+                <small *ngIf="nome.errors.minlength && (nome.dirty || nome.touched)">
+                    O campo nome deve conter no mínimo {{nome.errors.minlength.requiredLength}} caracteres
+                </small>
+                <small *ngIf="nome.errors.maxlength && (nome.dirty || nome.touched)">
+                    O campo nome deve conter no máximo {{nome.errors.maxlength.requiredLength}} caracteres
+                </small>
+            </ion-text>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Quantidade de doses: </ion-label>
+            <ion-input formControlName="qtdDoses" type="text"></ion-input>
+            <ion-text color="danger" *ngIf="qtdDoses.errors">
+                <small *ngIf="qtdDoses.errors.required && (qtdDoses.dirty || qtdDoses.touched)">
+                    O campo doses é obrigatório
+                </small>
+                <small *ngIf="qtdDoses.errors.min && (qtdDoses.dirty || qtdDoses.touched)">
+                    Deve ter pelo menos uma dose {{qtdDoses.errors.min}} dose
+                </small>
+            </ion-text>
+        </ion-item>
+
+
+        <ion-fab vertical="bottom" horizontal="end">
+            <ion-fab-button (click)="salvar()" [disabled]="!vacinasForm.valid">
+                <ion-icon name="checkmark-outline"></ion-icon>
+            </ion-fab-button>
+        </ion-fab>
+    </form>
+</ion-content>

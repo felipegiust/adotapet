@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-avatar slot="start">
+      <img src="https://image.flaticon.com/icons/png/512/12/12638.png" />
+    </ion-avatar>
+    <ion-title class="title-color">AdotaPet</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Bem-vindo ao AdotaPet App!
+      </ion-card-title>
+      <ion-card-subtitle>
+        Gerencie adoção dos seu pets.
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Cadastre já seu pet. Ajude a protegê-lo. Amor aos Cachorros.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-header [routerLink]="['/pets']">
+          <img src="https://old.revistacobertura.com.br/site-2017/wp-content/uploads/2019/07/pets.jpg" />
+          <ion-card-subtitle class="title-color">Pets</ion-card-subtitle>
+          <ion-card-title>Cadastro de Pets</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          Aqui você ira cadatrar seus diferenciados pets resgatados ou adquiridos no seu departamento.
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card>
+        <ion-card-header [routerLink]="['/adocao']">
+          <img src="https://pensamentoverde.com.br/wp-content/uploads/2018/03/1-adocao.jpg" />
+          <ion-card-subtitle class="title-color">Adoção</ion-card-subtitle>
+          <ion-card-title>Cadastro da Adoação</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          Aqui você ira cadatrar as pessoas que iram adotar o seu pets já cadatrado no seu sistema.
+        </ion-card-content>
+      </ion-card>
+
+    </ion-col>
+
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-header [routerLink]="['/vacinas']">
+          <img src="https://www.proteste.org.br/-/media/proteste/images/home/alimentacao/alimento%20industrializado/cachorro-vacina.png?rev=f1908db6-cc5c-45fe-9570-5879534b8b0e&mw=480&hash=49DD4EB1967C503F54592CCD6DE84E78" />
+          <ion-card-subtitle class="title-color">Vacinas</ion-card-subtitle>
+          <ion-card-title>Cadastro de Vacinas</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Aqui você ira cadatrar as vacinas que iram inserir nos seu pets já cadatrado no seu sistema.
+          
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card>
+        
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+
+</ion-content>

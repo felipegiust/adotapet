@@ -1,0 +1,77 @@
+{
+  "pets": [
+    {
+      "nome": "Fiona",
+      "dataNascimento": "2020-04-28T20:52:18.973-03:00",
+      "sexo": "MACHO",
+      "especie": "AVES",
+      "imagem": "https://i1.wp.com/jornal.usp.br/wp-content/uploads/2020/04/20200403_00_gato.jpg?fit=800%2C420&ssl=1",
+      "id": 2
+    },
+    {
+      "nome": "REX",
+      "dataNascimento": "2021-01-05T16:37:13.708-03:00",
+      "sexo": "MACHO",
+      "especie": "CAES",
+      "imagem": "https://super.abril.com.br/wp-content/uploads/2018/05/filhotes-de-cachorro-alcanc3a7am-o-c3a1pice-de-fofura-com-8-semanas1.png",
+      "vacinasAplicadas": [
+        {
+          "nome": "dfasaswd",
+          "qtdDoses": 1,
+          "id": 1
+        }
+      ],
+      "id": 3
+    }
+  ],
+  "adocao": [
+    {
+      "nome": "Martin Fowler editado 2",
+      "pets": {
+        "nome": "Fiona",
+        "dataNascimento": "2020-04-28T20:52:18.973-03:00",
+        "sexo": "MACHO",
+        "especie": "AVES",
+        "imagem": "https://i1.wp.com/jornal.usp.br/wp-content/uploads/2020/04/20200403_00_gato.jpg?fit=800%2C420&ssl=1",
+        "id": 2
+      },
+      "telefone": "4899652977",
+      "cidade": "Jacinto Machado",
+      "id": 1,
+      "email": "felipegius@gmail.com"
+    },
+    {
+      "nome": "Rodrigo Editado",
+      "telefone": 489999999,
+      "cidade": "Jacinto Machado Editado",
+      "email": "felipe@gmail.com Editado",
+      "pets": {
+        "nome": "Fiona",
+        "dataNascimento": "2020-04-28T20:52:18.973-03:00",
+        "sexo": "MACHO",
+        "especie": "AVES",
+        "imagem": "https://i1.wp.com/jornal.usp.br/wp-content/uploads/2020/04/20200403_00_gato.jpg?fit=800%2C420&ssl=1",
+        "id": 2
+      },
+      "id": 2
+    },
+    {
+      "nome": "Dede",
+      "telefone": 48965299,
+      "cidade": "Sombriu",
+      "email": "felipe@gmail.com",
+      "pets": {
+        "nome": "REX",
+        "dataNascimento": "2021-01-05T16:37:13.708-03:00",
+        "sexo": "MACHO",
+        "especie": "CAES",
+        "imagem": "https://super.abril.com.br/wp-content/uploads/2018/05/filhotes-de-cachorro-alcanc3a7am-o-c3a1pice-de-fofura-com-8-semanas1.png",
+        "id": 3
+      },
+      "id": 3
+    }
+  ],
+  "vacinas": [
+    
+  ]
+}

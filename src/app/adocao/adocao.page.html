@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="title-color">Adoção</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item-sliding *ngFor="let adote of adocao">
+
+      <ion-item>
+        
+        <ion-label>
+          <h2>Dono: <strong>{{adote.nome}}</strong></h2>
+          
+          <h4><strong>Telefone:</strong> {{adote.telefone}}</h4>
+          <h4><strong>Cidade:</strong> {{adote.cidade}}</h4>
+          <h4><strong>Email:</strong> {{adote.email}}</h4>
+        </ion-label>
+        <div class="ion-text-right">
+          <h1>
+            <ion-text class="title-color">
+              <strong>{{adote.pets.nome}}</strong>
+            </ion-text>
+          </h1>
+          <ion-avatar slot="start">
+            <img [src]="adote.pets.imagem? adote.pets.imagem: 'https://cdn.neemo.com.br/uploads/settings_webdelivery/logo/1906/340719-200.png'"/>
+          </ion-avatar>
+        </div>
+
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="confirmarExclusao(adote)">
+          <ion-icon name="trash" slot="icon-only"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+      <ion-item-options side="start">
+        <ion-item-option [routerLink]="['edicao', adote.id]">
+          <ion-icon name="pencil" slot="icon-only"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+    </ion-item-sliding>
+
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end">
+    <ion-fab-button [routerLink]="['cadastro']">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
