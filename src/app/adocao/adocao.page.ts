@@ -41,7 +41,7 @@ export class AdocaoPage implements OnInit {
 
     this.alertController.create({
       header: 'Confirmação de exclusão', 
-      message: `Deseja excluir o livro ${adote.nome}?`,
+      message: `Deseja excluir  Adoção ${adote.nome}?`,
       buttons: [
         {
           text: 'Sim',
@@ -63,7 +63,7 @@ export class AdocaoPage implements OnInit {
       },
       (erro)=>{
         this.toastController.create({
-          message:`Não foi possivel excluir o livro ${adote.nome}`,
+          message:`Não foi possivel excluir  Adoção ${adote.nome}`,
           color:'danger',
           duration: 5000,
           keyboardClose: true,

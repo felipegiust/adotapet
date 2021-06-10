@@ -70,7 +70,7 @@ export class VacinasPage implements OnInit {
       },
       (erro)=>{
         this.toastController.create({
-          message:`Não foi possivel Excluir o autor ${vacina.nome}`,
+          message:`Não foi possivel Excluir a vacina ${vacina.nome}`,
           color:'danger',
           duration: 5000,
           keyboardClose: true,

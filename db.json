@@ -6,6 +6,13 @@
       "sexo": "MACHO",
       "especie": "AVES",
       "imagem": "https://i1.wp.com/jornal.usp.br/wp-content/uploads/2020/04/20200403_00_gato.jpg?fit=800%2C420&ssl=1",
+      "vacinasAplicadas": [
+        {
+          "nome": "Vacina Teste",
+          "qtdDoses": 1,
+          "id": 1
+        }
+      ],
       "id": 2
     },
     {
@@ -16,12 +23,27 @@
       "imagem": "https://super.abril.com.br/wp-content/uploads/2018/05/filhotes-de-cachorro-alcanc3a7am-o-c3a1pice-de-fofura-com-8-semanas1.png",
       "vacinasAplicadas": [
         {
-          "nome": "dfasaswd",
+          "nome": "Vacina Teste",
           "qtdDoses": 1,
           "id": 1
         }
       ],
       "id": 3
+    },
+    {
+      "nome": "teste",
+      "dataNascimento": "2020-06-09T19:43:42.330-03:00",
+      "sexo": "FEMEA",
+      "especie": "REPTEIS",
+      "imagem": "",
+      "vacinasAplicadas": [
+        {
+          "nome": "Vacina Teste",
+          "qtdDoses": 1,
+          "id": 1
+        }
+      ],
+      "id": 4
     }
   ],
   "adocao": [
@@ -72,6 +94,10 @@
     }
   ],
   "vacinas": [
-    
+    {
+      "nome": "Vacina Teste",
+      "qtdDoses": 1,
+      "id": 1
+    }
   ]
 }

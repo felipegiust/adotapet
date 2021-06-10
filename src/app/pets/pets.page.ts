@@ -55,7 +55,7 @@ export class PetsPage implements OnInit {
   confirmarExclusao(pets: Pets) {
     this.alertController.create({
       header: 'Confirmação de exclusão', 
-      message: `Deseja excluir o autor ${pets.nome}?`,
+      message: `Deseja excluir o Pet ${pets.nome}?`,
       buttons: [
         {
           text: 'Sim',
@@ -75,7 +75,7 @@ export class PetsPage implements OnInit {
       },
       (erro)=>{
         this.toastController.create({
-          message:`Não foi possivel Excluir o autor ${pets.nome}`,
+          message:`Não foi possivel Excluir o Pet ${pets.nome}`,
           color:'danger',
           duration: 5000,
           keyboardClose: true,
