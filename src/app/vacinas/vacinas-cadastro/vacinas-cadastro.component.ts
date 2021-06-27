@@ -59,10 +59,9 @@ export class VacinasCadastroComponent implements OnInit {
     const vacina = { ...this.vacinasForm.value, id: this.vacinaId }
     this.vacinasService.salvar(vacina).subscribe(
       () => this.router.navigate(['vacinas']),
-      (erro) => {
-        console.error(erro);
+      (response) => {
         this.toastController.create({
-          message: `Não foi possível salvar o vacina ${vacina.nome}`,
+          message: response.error.message || `Não foi possível salvar o vacina ${vacina.nome}`,
           duration: 5000,
           keyboardClose: true,
           color: 'danger'

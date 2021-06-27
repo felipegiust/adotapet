@@ -108,13 +108,13 @@ export class PetsCadastroComponent implements OnInit {
 
   salvar() {
     const pet = { ...this.petsForm.value, id: this.petId }
+    pet.dataNascimento = pet.dataNascimento.substring(0, 10)
     console.log(pet)
     this.petService.salvar(pet).subscribe(
       () => this.router.navigate(['pets']),
-      (erro) => {
-        console.error(erro);
+      (response) => {
         this.toastController.create({
-          message: `Não foi possível salvar o pet ${pet.nome}`,
+          message: response.error.message || `Não foi possível salvar o pet ${pet.nome}`,
           duration: 5000,
           keyboardClose: true,
           color: 'danger'

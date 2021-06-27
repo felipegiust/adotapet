@@ -8,7 +8,7 @@ import { Vacina } from './vacina.model';
 })
 export class VacinasService {
 
-  private url = 'http://localhost:3000/vacinas';
+  private url = 'http://localhost:8080/adotapet/api/vacinas';
 
   constructor(
     private httpClient: HttpClient

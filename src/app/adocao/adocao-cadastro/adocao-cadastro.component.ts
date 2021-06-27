@@ -102,10 +102,9 @@ console.error(erro);
     const adote = { ...this.adocaoForm.value, id: this.adoteId }
     this.adoteService.salvar(adote).subscribe(
       () => this.router.navigate(['adocao']),
-      (erro) => {
-        console.error(erro);
+      (response) => {
         this.toastController.create({
-          message: `Não foi possível salvar o Adoção ${adote.nome}`,
+          message: response.error.message || `Não foi possível salvar o Adoção ${adote.nome}`,
           duration: 5000,
           keyboardClose: true,
           color: 'danger'

@@ -8,7 +8,7 @@ import { Adote } from './adote.model';
 })
 export class AdoteService {
 
-  private url ='http://localhost:3000/adocao';
+  private url = 'http://localhost:8080/adotapet/api/adocoes';
 
   constructor(
     private httpClient: HttpClient

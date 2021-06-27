@@ -9,7 +9,7 @@ import { Especies } from './especies.enum';
 })
 export class PetsService {
 
-  private url ='http://localhost:3000/pets';
+  private url ='http://localhost:8080/adotapet/api/pets';
 
   constructor(
     private httpClient: HttpClient
